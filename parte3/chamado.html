@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InfoTech IFPB - Chamados</title>
+    <link rel="stylesheet" href="/parte2/style.css" />
+</head>
+<body>
+
+<header>
+    <h1>InfoTech IFPB</h1>
+    <nav>
+        <ul>
+            <li><a href="/parte1/index.html">Início</a></li>
+            <li><a href="/parte1/servicos.html">Serviços</a></li>
+            <li><a href="#chamado.html">Chamados</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section>
+        <h2>Abrir Novo Chamado</h2>
+
+        <form method="post" action="#" aria-label="Formulário de abertura de chamado">
+
+            <label for="nome">Nome completo:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" name="telefone" placeholder="(83) 99153-6728” required>
+
+            <label for="servico">Tipo de Serviço:</label>
+            <select id="servico" name="servico" required>
+                <option value="">Selecione um serviço</option>
+                <option value="hardware">Hardware</option>
+                <option value="software">Software</option>
+                <option value="redes">Redes</option>
+            </select>
+
+            <label for="descricao">Descrição do Problema:</label>
+            <textarea id="descricao" name="descricao" rows="4" required></textarea>
+
+            <label class="urgencia-label">
+                <input type="checkbox" id="urgencia" name="urgencia">
+                Este chamado é urgente
+            </label>
+
+            <button type="submit">Enviar Chamado</button>
+
+        </form>
+    </section>
+</main>
+
+<footer>
+    <p>InfoTech IFPB — Sistema de Chamados</p>
+</footer>
+
+</body>
+</html>
