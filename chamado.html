@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>InfoTech IFPB - Chamados</title>
-    <link rel="stylesheet" href="/parte2/style.css" />
+    <link rel="stylesheet" href="/css/style.css" />
 </head>
 <body>
 
@@ -12,8 +12,8 @@
     <h1>InfoTech IFPB</h1>
     <nav>
         <ul>
-            <li><a href="/parte1/index.html">Início</a></li>
-            <li><a href="/parte1/servicos.html">Serviços</a></li>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="servicos.html">Serviços</a></li>
             <li><a href="#chamado.html">Chamados</a></li>
         </ul>
     </nav>
@@ -32,7 +32,7 @@
             <input type="email" id="email" name="email" required>
 
             <label for="telefone">Telefone:</label>
-            <input type="tel" id="telefone" name="telefone" placeholder="(83) 99153-6728” required>
+            <input type="tel" id="telefone" name="telefone" required>
 
             <label for="servico">Tipo de Serviço:</label>
             <select id="servico" name="servico" required>
@@ -45,10 +45,11 @@
             <label for="descricao">Descrição do Problema:</label>
             <textarea id="descricao" name="descricao" rows="4" required></textarea>
 
-            <label class="urgencia-label">
-                <input type="checkbox" id="urgencia" name="urgencia">
-                Este chamado é urgente
-            </label>
+            <div class="urgencia-group">
+                <label class="checkbox-label">
+                    <input type="radio" id="muito-urgente" name="urgencia" value="muito" required>Muito urgente</label>
+                <label class="checkbox-label">
+                    <input type="radio" id="pouco-urgente" name="urgencia" value="pouco">Pouco urgente</label></div>
 
             <button type="submit">Enviar Chamado</button>
 
