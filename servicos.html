@@ -2,44 +2,48 @@
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>InfoTech IFPB - Serviços</title>
-  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
-<br>
+<body>
   <header>
-    <h1>InfoTech IFPB</h1>
-    <nav>
+    <div class="logo">
+      <img src="assets/logo.jpeg" alt="Logotipo InfoTech IFPB">
+      <h1>InfoTech IFPB</h1>
+    </div>
+
+    <nav aria-label="Menu principal">
       <ul>
-        <li><a href="index.html">Inicial</a></li>
-        <li><a href="#servicos.html">Serviços</a></li>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="servicos.html" aria-current="page">Serviços</a></li>
         <li><a href="chamado.html">Abrir Chamado</a></li>
       </ul>
     </nav>
   </header>
 
-  
-    <h2>Serviços:</h2>
-    <section class="cards-container">
+  <main>
+    <h2>Serviços</h2>
+    <p>Oferecemos suporte completo em hardware, software e redes. Abaixo, exemplos dos serviços prestados.</p>
 
-        <article class="card">
-            <img src="/assets/vitoria.jpeg" alt="Manutenção de Hardware">
+    <section class="cards-container" aria-label="Serviços oferecidos">
+        <article class="card" tabindex="0">
+            <img src="assets/vitoria.jpeg" alt="Técnica realizando manutenção de hardware">
             <h3>Hardware</h3>
             <p>Troca de peças, montagem de computadores, diagnóstico e prevenção de falhas.</p>
         </article>
 
-        <article class="card">
-            <img src="/assets/carol.jpeg" alt="Manutenção de Software">
+        <article class="card" tabindex="0">
+            <img src="assets/carol.jpeg" alt="Técnica realizando manutenção de software">
             <h3>Software</h3>
             <p>Formatação, remoção de vírus, instalação de sistemas e atualizações.</p>
         </article>
 
-        <article class="card">
-            <img src="/assets/eduarda.jpeg" alt="Serviços de Redes">
+        <article class="card" tabindex="0">
+            <img src="assets/eduarda.jpeg" alt="Equipe configurando rede">
             <h3>Redes</h3>
             <p>Configuração de roteadores, cabeamento e otimização de conexões.</p>
         </article>
-
     </section>
   </main>
 

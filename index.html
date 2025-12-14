@@ -2,47 +2,54 @@
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>InfoTech IFPB - Home</title>
-  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
   <header>
-    <h1>InfoTech IFPB</h1>
-    <p>Serviços de suporte e manutenção em Hardware, Software e Redes </p>
-    <nav>
+    <div class="logo" aria-hidden="false">
+      <img src="assets/logo.jpeg" alt="Logotipo InfoTech IFPB">
+      <h1>InfoTech IFPB</h1>
+    </div>
+    <nav aria-label="Menu principal">
         <ul>
-          <li><a href="#index.html">Inicial</a></li>
+          <li><a href="index.html">Início</a></li>
           <li><a href="servicos.html">Serviços</a></li>
           <li><a href="chamado.html">Abrir Chamado</a></li>
         </ul>
-      </nav>    
+    </nav>    
   </header>
+
   <main>
-    <section>
+    <section class="hero">
       <h2>Bem-vindo à InfoTech IFPB</h2>
-      <br/>
-      <p> A InfoTeach é especializada em serviços de manutenção e suporte. Explore nosso site para conhecer o que fazemos ou para solicitar atendimento por meio de um chamado.</p>
-      <br/>
+      <p>A InfoTech é especializada em serviços de manutenção e suporte em Hardware, Software e Redes. Abra um chamado ou confira nossos serviços abaixo.</p>
     </section>
-    <figure>
-      <img src="/assets/logo.jpeg" alt="Logo" width="200">
-    </figure>
-    <br/>
-    <section>
-      <h3>Serviços em destaque:</h3>
-      <br/>
-      <ul>
+
+    <section aria-labelledby="destaques">
+      <h3 id="destaques">Serviços em destaque</h3>
+      <ul class="destaques-list">
         <li>Manutenção de hardware</li>
         <li>Instalação e reparo de software</li>
         <li>Configuração e suporte de redes</li>
       </ul>
     </section>
+
+    <section>
+      <h3>Conheça nossos serviços</h3>
+      <p><a class="link-card" href="servicos.html">Veja todos os serviços</a></p>
+    </section>
   </main>
 
   <footer>
     <p>Desenvolvido por: Maria Eduarda, Carol Alexandre e Vitória Maria</p>
-    <p>InfoTeach</p>
+    <p>InfoTech IFPB — &copy; <span id="ano"></span></p>
   </footer>
+
+  <script>
+    // Atualiza ano no rodapé
+    document.getElementById('ano').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>

@@ -1,20 +1,24 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>InfoTech IFPB - Chamados</title>
-    <link rel="stylesheet" href="/css/style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>InfoTech IFPB - Abrir Chamado</title>
+    <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
 <header>
-    <h1>InfoTech IFPB</h1>
-    <nav>
+    <div class="logo">
+      <img src="assets/logo.jpeg" alt="Logotipo InfoTech IFPB">
+      <h1>InfoTech IFPB</h1>
+    </div>
+
+    <nav aria-label="Menu principal">
         <ul>
             <li><a href="index.html">Início</a></li>
             <li><a href="servicos.html">Serviços</a></li>
-            <li><a href="#chamado.html">Chamados</a></li>
+            <li><a href="chamado.html" aria-current="page">Chamados</a></li>
         </ul>
     </nav>
 </header>
@@ -23,18 +27,17 @@
     <section>
         <h2>Abrir Novo Chamado</h2>
 
-        <form method="post" action="#" aria-label="Formulário de abertura de chamado">
-
-            <label for="nome">Nome completo:</label>
+        <form method="post" action="#" aria-label="Formulário de abertura de chamado" novalidate>
+            <label for="nome">Nome completo</label>
             <input type="text" id="nome" name="nome" required>
 
-            <label for="email">Email:</label>
+            <label for="email">E-mail</label>
             <input type="email" id="email" name="email" required>
 
-            <label for="telefone">Telefone:</label>
-            <input type="tel" id="telefone" name="telefone" required>
+            <label for="telefone">Telefone</label>
+            <input type="tel" id="telefone" name="telefone" placeholder="(xx) xxxxx-xxxx" pattern="[\d\s\-\(\)]{8,}" required>
 
-            <label for="servico">Tipo de Serviço:</label>
+            <label for="servico">Tipo de Serviço</label>
             <select id="servico" name="servico" required>
                 <option value="">Selecione um serviço</option>
                 <option value="hardware">Hardware</option>
@@ -42,17 +45,24 @@
                 <option value="redes">Redes</option>
             </select>
 
-            <label for="descricao">Descrição do Problema:</label>
-            <textarea id="descricao" name="descricao" rows="4" required></textarea>
+            <label for="descricao">Descrição do Problema</label>
+            <textarea id="descricao" name="descricao" rows="6" required></textarea>
 
-            <div class="urgencia-group">
-                <label class="checkbox-label">
-                    <input type="radio" id="muito-urgente" name="urgencia" value="muito" required>Muito urgente</label>
-                <label class="checkbox-label">
-                    <input type="radio" id="pouco-urgente" name="urgencia" value="pouco">Pouco urgente</label></div>
+            <fieldset class="urgencia-group" aria-label="Nível de urgência">
+                <legend>Urgência</legend>
+                <label>
+                  <input type="radio" name="urgencia" value="baixa" required> Baixa
+                </label>
+                <label>
+                  <input type="radio" name="urgencia" value="media"> Média
+                </label>
+                <label>
+                  <input type="radio" name="urgencia" value="alta"> Alta
+                </label>
+            </fieldset>
+
 
             <button type="submit">Enviar Chamado</button>
-
         </form>
     </section>
 </main>
