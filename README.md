@@ -41,4 +41,5 @@ O manual de uso do sistema, detalhando as funcionalidades de cada tela, está lo
 * **Vitoria Maria Basilio Bezerra**
 * **Carol Alexandre Querino**
 * **Maria Eduarda Pinheiro Calixto**
+* **Lourena Feitosa Barbosa**
 * **Turma:** 3º INTIN
