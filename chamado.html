@@ -8,10 +8,10 @@
 </head>
 <body>
 
-    <header>
+<header>
     <div class="logo">
-      <img src="assets/logo.jpeg" alt="Logotipo InfoTech IFPB">
-      <h1>InfoTech IFPB</h1>
+        <img src="assets/logo.jpeg" alt="Logotipo InfoTech IFPB">
+        <h1>InfoTech IFPB</h1>
     </div>
 
     <nav aria-label="Menu principal">
@@ -21,13 +21,14 @@
             <li><a href="chamado.html" aria-current="page">Chamados</a></li>
         </ul>
     </nav>
-    </header>
+</header>
 
-    <main>
+<main>
     <section>
         <h2>Abrir Novo Chamado</h2>
+        <form method="post" action="#" enctype="multipart/form-data"
+              aria-label="Formulário de abertura de chamado" novalidate>
 
-        <form method="post" action="#" aria-label="Formulário de abertura de chamado" novalidate>
             <label for="nome">Nome completo</label>
             <input type="text" id="nome" name="nome" required>
 
@@ -35,7 +36,9 @@
             <input type="email" id="email" name="email" required>
 
             <label for="telefone">Telefone</label>
-            <input type="tel" id="telefone" name="telefone" placeholder="(xx) xxxxx-xxxx" pattern="[\d\s\-\(\)]{8,}" required>
+            <input type="tel" id="telefone" name="telefone"
+                   placeholder="(xx) xxxxx-xxxx"
+                   pattern="[\d\s\-\(\)]{8,}" required>
 
             <label for="servico">Tipo de Serviço</label>
             <select id="servico" name="servico" required>
@@ -51,21 +54,23 @@
             <fieldset class="urgencia-group" aria-label="Nível de urgência">
                 <legend>Urgência</legend>
                 <label>
-                  <input type="radio" name="urgencia" value="baixa" required> Baixa
+                    <input type="radio" name="urgencia" value="baixa" required> Baixa
                 </label>
                 <label>
-                  <input type="radio" name="urgencia" value="media"> Média
+                    <input type="radio" name="urgencia" value="media"> Média
                 </label>
                 <label>
-                  <input type="radio" name="urgencia" value="alta"> Alta
+                    <input type="radio" name="urgencia" value="alta"> Alta
                 </label>
             </fieldset>
 
+            <label for="foto">Foto do problema (opcional)</label>
+            <input type="file" id="foto" name="foto" accept="image/*">
 
             <button type="submit">Enviar Chamado</button>
         </form>
     </section>
-    </main>
+</main>
 
 <footer>
     <p>InfoTech IFPB — Sistema de Chamados</p>
