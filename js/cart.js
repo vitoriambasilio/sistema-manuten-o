@@ -1,4 +1,3 @@
-// Cart logic: add, remove, update quantities, persist in localStorage
 const CART_KEY = 'itens_carrinho_v1';
 
 function formatBRL(value){
@@ -24,7 +23,6 @@ function calcularTotal(cart){
   return Object.values(cart).reduce((s, it) => s + (it.price * it.qtd), 0);
 }
 
-// Render mini-cart
 function renderCart(cart){
   let panel = document.getElementById('mini-cart');
   if(!panel){
@@ -60,7 +58,6 @@ function renderCart(cart){
   const total = calcularTotal(cart);
   panel.innerHTML = `<h3>Carrinho</h3><div class="cart-list">${list}</div><div class="cart-total">Total: <strong>${formatBRL(total)}</strong></div><div class="cart-actions"><button id="checkout">Finalizar compra</button><button id="close-cart">Fechar</button></div>`;
 
-  // attach events
   panel.querySelectorAll('.remove-item').forEach(btn => {
     btn.addEventListener('click', (e) => {
       const id = e.currentTarget.dataset.id;
@@ -98,7 +95,7 @@ function renderCart(cart){
   const checkout = panel.querySelector('#checkout');
   if(checkout) checkout.addEventListener('click', () => {
     alert('Simulação de checkout: dados do carrinho enviados.');
-    // limpeza do carrinho após checkout simulado
+
     for(const k of Object.keys(cart)) delete cart[k];
     salvarCarrinho(cart);
     atualizarContador(cart);
@@ -107,7 +104,6 @@ function renderCart(cart){
   });
 }
 
-// Add item to cart
 function addToCart(item){
   const cart = carregarCarrinho();
   if(cart[item.id]){
@@ -120,13 +116,11 @@ function addToCart(item){
   renderCart(cart);
 }
 
-// Initialize bindings
 document.addEventListener('DOMContentLoaded', () => {
   const cart = carregarCarrinho();
   atualizarContador(cart);
   renderCart(cart);
 
-  // bind buy buttons
   document.querySelectorAll('.btn-comprar').forEach(btn => {
     btn.addEventListener('click', (e) => {
       const article = e.currentTarget.closest('.produto');
@@ -139,7 +133,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // toggle cart
   const toggle = document.getElementById('cart-toggle');
   if(toggle) toggle.addEventListener('click', () => {
     const panel = document.getElementById('mini-cart');

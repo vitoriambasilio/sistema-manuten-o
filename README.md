@@ -59,16 +59,6 @@ O manual de uso do sistema, detalhando as funcionalidades de cada tela, está lo
 - O carrinho foi implementado em `js/cart.js` e usa `localStorage` para persistência local.
 - A ação de checkout é simulada no protótipo (exibe alerta e limpa o carrinho).
 
-Se quiser que eu integre um backend simples (Node/Express) para receber pedidos, posso criar um esboço.
-
-## 7. 🤖 Chatbot de suporte
-
-Há dois arquivos de treinamento para o chatbot:
-- `chatbot_training.txt` — respostas gerais sobre InfoTech e abertura de chamados.
-- `chatbot_store_training.txt` — catálogo e exemplos para intents da loja.
-
-Estes arquivos podem ser convertidos para CSV/JSON para treinar um NLU (Rasa, Dialogflow).
-
 ## 8. 📜 Licença
 
 Projeto sob licença MIT. Veja o arquivo `LICENSE` para detalhes.
