@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>InfoTech IFPB - Loja</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <img src="assets/logo.jpeg" alt="Logotipo InfoTech IFPB">
+    <h1>InfoTech IFPB</h1>
+  </div>
+
+  <nav aria-label="Menu principal">
+    <ul>
+      <li><a href="index.html">Início</a></li>
+      <li><a href="servicos.html">Serviços</a></li>
+  <li><a href="loja.html">Loja</a></li>
+      <li><a href="chamado.html">Chamados</a></li>
+  <li class="carrinho" id="cart-toggle">🛒 Carrinho (<span id="contador">0</span>)</li>
+    </ul>
+  </nav>
+</header>
+
+<main class="loja-container">
+
+  <!-- FILTROS -->
+  <aside class="filtros">
+    <h3>Categorias</h3>
+    <button data-filter="all">Todos</button>
+    <button data-filter="hardware">Hardware</button>
+    <button data-filter="perifericos">Periféricos</button>
+    <button data-filter="redes">Redes</button>
+  </aside>
+
+  <!-- VITRINE -->
+  <section class="vitrine">
+
+    <article class="produto" data-category="hardware" data-id="p1" data-name="Placa de Vídeo RTX 4060" data-price="3299.00">
+      <span class="badge oferta">OFERTA</span>
+      <img src="assets/placadevideo.jpeg" alt="Placa de Vídeo RTX 4060">
+      <h4>Placa de Vídeo RTX 4060</h4>
+      <p class="preco-antigo">R$ 3.999,00</p>
+      <p class="preco-novo">R$ 3.299,00</p>
+      <button class="btn-comprar">Comprar</button>
+    </article>
+
+    <article class="produto" data-category="hardware" data-id="p2" data-name="Processador Ryzen 5 5600" data-price="999.00">
+      <span class="badge novo">NOVO</span>
+      <img src="assets/processador.jpeg" alt="Processador Ryzen 5">
+      <h4>Processador Ryzen 5 5600</h4>
+      <p class="preco-antigo">R$ 1.299,00</p>
+      <p class="preco-novo">R$ 999,00</p>
+      <button class="btn-comprar">Comprar</button>
+    </article>
+
+    <article class="produto" data-category="redes" data-id="p3" data-name="Roteador Mesh Wi-Fi 6" data-price="699.00">
+      <img src="assets/roteador.jpeg" alt="Roteador Mesh">
+      <h4>Roteador Mesh Wi-Fi 6</h4>
+      <p class="preco-antigo">R$ 899,00</p>
+      <p class="preco-novo">R$ 699,00</p>
+      <button class="btn-comprar">Comprar</button>
+    </article>
+
+    <article class="produto" data-category="perifericos" data-id="p4" data-name="Teclado Mecânico Gamer" data-price="349.00">
+      <span class="badge oferta">OFERTA</span>
+      <img src="assets/teclado.jpeg" alt="Teclado Mecânico Gamer">
+      <h4>Teclado Mecânico Gamer</h4>
+      <p class="preco-antigo">R$ 499,00</p>
+      <p class="preco-novo">R$ 349,00</p>
+      <button class="btn-comprar">Comprar</button>
+    </article>
+
+    <article class="produto" data-category="perifericos" data-id="p5" data-name="Mouse Gamer RGB" data-price="199.00">
+      <img src="assets/mouse.jpeg" alt="Mouse Gamer">
+      <h4>Mouse Gamer RGB</h4>
+      <p class="preco-antigo">R$ 299,00</p>
+      <p class="preco-novo">R$ 199,00</p>
+      <button class="btn-comprar">Comprar</button>
+    </article>
+
+    <article class="produto" data-category="redes" data-id="p6" data-name="Switch Gigabit 8 Portas" data-price="299.00">
+      <span class="badge novo">NOVO</span>
+      <img src="assets/switch.jpeg" alt="Switch de Rede">
+      <h4>Switch Gigabit 8 Portas</h4>
+      <p class="preco-antigo">R$ 399,00</p>
+      <p class="preco-novo">R$ 299,00</p>
+      <button class="btn-comprar">Comprar</button>
+    </article>
+
+  </section>
+</main>
+
+<footer>
+  <p>InfoTech IFPB — Loja de Hardware & Tecnologia</p>
+</footer>
+
+<script src="js/script.js"></script>
+<script src="js/cart.js"></script>
+
+<!-- AQUI ENTRA O SCRIPT DO CHATLING -->
+<!-- Cole o código do Chatling aqui -->
+
+</body>
+</html>
